@@ -31,5 +31,9 @@ namespace MediaPlayerWPF
                 Console.WriteLine(Properties.Settings.Default.LibraryLocation);
             }
         }
+        ~MainWindow()
+        {
+            Properties.Settings.Default.Save();
+        }
     }
 }
