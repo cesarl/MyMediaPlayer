@@ -13,5 +13,8 @@ namespace MediaPlayerWPF
     /// </summary>
     public partial class App : Application
     {
+        void OnExit(EventHandler e)
+        { 
+        }
     }
 }

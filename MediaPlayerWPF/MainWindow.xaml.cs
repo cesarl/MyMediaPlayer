@@ -23,6 +23,13 @@ namespace MediaPlayerWPF
         public MainWindow()
         {
             InitializeComponent();
+            if (Properties.Settings.Default.LibraryLocation.Equals("null"))
+            {
+                var form = new SettingsForm();
+                form.Activate();
+                form.ShowDialog();
+                Console.WriteLine(Properties.Settings.Default.LibraryLocation);
+            }
         }
     }
 }
